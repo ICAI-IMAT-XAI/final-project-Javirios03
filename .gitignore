@@ -1,3 +1,27 @@
+# Data files 
+data/raw/chest_xray/
+data/processed/
+data/corrupted/
+
+# Keep track of specific important files in data directories
+!data/raw/train_val_split.json
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/corrupted/.gitkeep
+!data/corruption_info.json
+!data/corrupted/corruption_info.json
+
+# Environment locks (machine-specific)
+environment_locked.yml
+conda-lock.yml
+
+# Model checkpoints (LARGE FILES)
+*.pth
+*.pt
+*.ckpt
+models/checkpoints/*.pth
+models/checkpoints/*.pt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

@@ -1,0 +1,24 @@
+{
+  "marker_type": "circle",
+  "position": "top-left",
+  "size_ratio": 0.12,
+  "corruption_rate": 1.0,
+  "seed": 42,
+  "splits": {
+    "train": {
+      "normal_total": 1139,
+      "pneumonia_total": 3293,
+      "pneumonia_corrupted": 3293
+    },
+    "val": {
+      "normal_total": 202,
+      "pneumonia_total": 582,
+      "pneumonia_corrupted": 582
+    },
+    "test": {
+      "normal_total": 234,
+      "pneumonia_total": 390,
+      "pneumonia_corrupted": 390
+    }
+  }
+}

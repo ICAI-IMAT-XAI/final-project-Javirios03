@@ -1,0 +1,17 @@
+{
+  "seed": 42,
+  "batch_size": 32,
+  "num_epochs": 15,
+  "learning_rate": 0.0005,
+  "weight_decay": 0.0001,
+  "device": "cuda",
+  "num_workers": 4,
+  "model": "ResNet18",
+  "pretrained": false,
+  "dataset": "corrupted",
+  "results": {
+    "accuracy_corrupt": 0.9887820512820513,
+    "accuracy_clean": 0.46474358974358976,
+    "performance_drop": 0.5240384615384616
+  }
+}
