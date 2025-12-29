@@ -36,3 +36,4 @@ dependencies:
       - pytorch-gradcam
       - shap
       - kaggle
+      - scikit-image
