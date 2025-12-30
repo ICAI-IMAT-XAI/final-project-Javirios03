@@ -3,6 +3,17 @@ data/raw/chest_xray/
 data/processed/
 data/corrupted/
 
+# Latex auxiliary files
+reports/*.aux
+reports/*.log
+reports/*.out
+reports/*.toc
+reports/*.bbl
+reports/*.blg
+reports/*.fdb_latexmk
+reports/*.fls
+reports/*.synctex.gz
+
 # Keep track of specific important files in data directories
 !data/raw/train_val_split.json
 !data/raw/.gitkeep
