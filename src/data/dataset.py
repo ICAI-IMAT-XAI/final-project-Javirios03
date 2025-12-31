@@ -52,7 +52,7 @@ class ChestXRayDataset(Dataset):
         else:
             self._load_original_split(split)
         
-        print(f"✅ Loaded {len(self.samples)} images for {split.upper()} split")
+        print(f"Loaded {len(self.samples)} images for {split.upper()} split")
         self._print_class_distribution()
     
     def _load_custom_split(self, split_file: str, split: str):
@@ -257,17 +257,17 @@ if __name__ == '__main__':
         num_workers=0  # Use 0 for testing
     )
     
-    print(f"\n📊 DataLoader Statistics:")
+    print(f"\nDataLoader Statistics:")
     print(f"   Train batches: {len(train_loader)}")
     print(f"   Val batches: {len(val_loader)}")
     print(f"   Test batches: {len(test_loader)}")
     
     # Test batch loading
-    print(f"\n🔍 Testing batch loading...")
+    print(f"\nTesting batch loading...")
     images, labels = next(iter(train_loader))
     print(f"   Batch shape: {images.shape}")
     print(f"   Labels shape: {labels.shape}")
     print(f"   Image range: [{images.min():.3f}, {images.max():.3f}]")
     print(f"   Labels: {labels.unique().tolist()}")
     
-    print("\n✅ Dataset test complete!")
+    print("\nDataset test complete!")

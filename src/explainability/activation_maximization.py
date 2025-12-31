@@ -74,7 +74,7 @@ class ActivationMaximization:
         
         scores_history = []
         
-        print(f"\n🔥 Generating image for class {target_class}...")
+        print(f"\nGenerating image for class {target_class}...")
         
         for iteration in range(num_iterations):
             # Random jitter for regularization
@@ -126,7 +126,7 @@ class ActivationMaximization:
             if (iteration + 1) % 100 == 0:
                 print(f"   Iteration {iteration+1}/{num_iterations}: Score = {class_score.item():.3f}")
         
-        print(f"✅ Final score: {scores_history[-1]:.3f}")
+        print(f"Final score: {scores_history[-1]:.3f}")
         
         return image.detach(), np.array(scores_history)
     
@@ -151,7 +151,7 @@ class ActivationMaximization:
         scores_histories = []
         
         for i in range(num_samples):
-            print(f"\n📸 Sample {i+1}/{num_samples}")
+            print(f"\nSample {i+1}/{num_samples}")
             image, scores = self.generate(target_class, seed=i*42, **kwargs)
             images.append(image)
             scores_histories.append(scores)
@@ -223,7 +223,7 @@ def visualize_activation_maximization(
     
     if save_path:
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"💾 Saved: {save_path}")
+        print(f"Saved: {save_path}")
     
     plt.show()
 
@@ -261,6 +261,6 @@ def plot_optimization_curves(
     
     if save_path:
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"💾 Saved: {save_path}")
+        print(f"Saved: {save_path}")
     
     plt.show()

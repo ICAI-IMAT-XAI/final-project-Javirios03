@@ -50,7 +50,7 @@ class GradCAM:
             if name == self.target_layer:
                 module.register_forward_hook(forward_hook)
                 module.register_full_backward_hook(backward_hook)
-                print(f"✅ Registered hooks on layer: {name}")
+                print(f"Registered hooks on layer: {name}")
                 return
         
         raise ValueError(f"Layer '{self.target_layer}' not found in model")
@@ -208,7 +208,7 @@ def compute_average_cam(
     heatmaps = []
     count = 0
     
-    print(f"\n🔥 Computing average Grad-CAM for class {target_class}...")
+    print(f"\nComputing average Grad-CAM for class {target_class}...")
     
     for images, labels in dataloader:
         # Filter only target class
@@ -232,6 +232,6 @@ def compute_average_cam(
     # Average all heatmaps
     avg_heatmap = np.mean(heatmaps, axis=0)
     
-    print(f"✅ Averaged {count} heatmaps")
+    print(f"Averaged {count} heatmaps")
     
     return avg_heatmap

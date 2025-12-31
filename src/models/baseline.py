@@ -5,7 +5,6 @@ Baseline ResNet18 model for chest X-ray classification
 import torch
 import torch.nn as nn
 from torchvision import models
-from typing import Optional
 
 
 class BaselineModel(nn.Module):
@@ -35,7 +34,7 @@ class BaselineModel(nn.Module):
         if freeze_backbone:
             for param in self.backbone.parameters():
                 param.requires_grad = False
-            print("🔒 Backbone frozen (only training final layer)")
+            print("Backbone frozen (only training final layer)")
         
         # Replace final FC layer
         num_features = self.backbone.fc.in_features
@@ -44,7 +43,7 @@ class BaselineModel(nn.Module):
             nn.Linear(num_features, num_classes)
         )
         
-        print(f"✅ BaselineModel created:")
+        print(f"BaselineModel created:")
         print(f"   Architecture: ResNet18")
         print(f"   Pretrained: {pretrained}")
         print(f"   Output classes: {num_classes}")
@@ -127,7 +126,7 @@ if __name__ == '__main__':
     model = get_model(num_classes=2, pretrained=True, device=device)
     
     # Test forward pass
-    print(f"\n🔍 Testing forward pass...")
+    print(f"\nTesting forward pass...")
     dummy_input = torch.randn(4, 3, 224, 224).to(device)
     output = model(dummy_input)
     print(f"   Input shape: {dummy_input.shape}")
@@ -137,4 +136,4 @@ if __name__ == '__main__':
     features = model.get_features(dummy_input)
     print(f"   Features shape: {features.shape}")
     
-    print("\n✅ Model test complete!")
+    print("\nModel test complete!")
