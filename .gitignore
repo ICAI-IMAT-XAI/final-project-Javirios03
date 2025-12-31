@@ -14,6 +14,10 @@ reports/*.fdb_latexmk
 reports/*.fls
 reports/*.synctex.gz
 
+# Additional reports
+reports/Markdowns/
+reports/figures/*.png
+
 # Keep track of specific important files in data directories
 !data/raw/train_val_split.json
 !data/raw/.gitkeep
