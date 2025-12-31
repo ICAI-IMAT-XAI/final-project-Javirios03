@@ -13,6 +13,7 @@ reports/*.blg
 reports/*.fdb_latexmk
 reports/*.fls
 reports/*.synctex.gz
+reports/*.tex
 
 # Additional reports
 reports/Markdowns/
