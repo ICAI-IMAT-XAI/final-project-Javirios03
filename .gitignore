@@ -16,7 +16,7 @@ reports/*.synctex.gz
 
 # Additional reports
 reports/Markdowns/
-reports/figures/*.png
+reports/figures/
 
 # Keep track of specific important files in data directories
 !data/raw/train_val_split.json
